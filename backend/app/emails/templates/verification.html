@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 style="margin:0 0 12px 0;font-size:20px;line-height:28px;font-weight:700;letter-spacing:-0.01em;">Verify your email</h1>
+<p style="margin:0 0 20px 0;color:#52525b;">Hi {{ name }}, enter this code to finish creating your {{ app_name }} workspace.</p>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" style="background:#f4f4f5;border-radius:10px;padding:20px;">
+<span style="font-family:'SFMono-Regular',Menlo,Consolas,monospace;font-size:34px;line-height:40px;font-weight:700;letter-spacing:10px;color:#18181b;">{{ code }}</span>
+</td></tr></table>
+<p style="margin:20px 0 0 0;color:#52525b;">The code expires in {{ minutes }} minutes. If you did not create an account, you can ignore this email.</p>
+{% endblock %}
+{% block footer %}This code is only valid for your sign-up. Never share it with anyone.{% endblock %}

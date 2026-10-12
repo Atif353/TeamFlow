@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 style="margin:0 0 12px 0;font-size:20px;line-height:28px;font-weight:700;letter-spacing:-0.01em;">Your account is ready</h1>
+<p style="margin:0;color:#52525b;">Hi {{ name }}, {{ creator }} created a {{ app_name }} account for you in <strong style="color:#18181b;">{{ workspace }}</strong> with the role <strong style="color:#18181b;">{{ role }}</strong>. Ask {{ creator }} for your initial password, then sign in and change it from your profile.</p>
+{% with url=url, label="Sign in" %}{% include "_button.html" %}{% endwith %}
+{% endblock %}

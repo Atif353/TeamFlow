@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<p style="margin:0 0 16px 0;color:#52525b;">{{ headline }}</p>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #e4e4e7;border-radius:10px;">
+<tr><td style="padding:16px 18px;">
+<p style="margin:0 0 6px 0;font-size:12px;line-height:16px;color:#71717a;text-transform:uppercase;letter-spacing:0.04em;">{{ issue_type }} &middot; {{ key }} &middot; {{ project }}</p>
+<p style="margin:0;font-size:17px;line-height:26px;font-weight:600;letter-spacing:-0.005em;">{{ title }}</p>
+<p style="margin:10px 0 0 0;font-size:13px;line-height:20px;color:#52525b;">Priority: {{ priority }}{% if due %} &middot; Due {{ due }}{% endif %}{% if status %} &middot; Status: {{ status }}{% endif %}</p>
+</td></tr>
+</table>
+{% with url=url, label="Open issue" %}{% include "_button.html" %}{% endwith %}
+{% endblock %}
+{% block footer %}You are receiving this because of your notification settings in {{ app_name }}.<br>Change them any time in <a href="{{ settings_url }}" style="color:#71717a;">your profile</a>.{% endblock %}
