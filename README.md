@@ -1,5 +1,18 @@
 # TeamFlow
 
+**Jira-style project management, from workspace permissions to sprint planning.**
+
+**Stack:** Python · FastAPI · MongoDB · React · TypeScript · pytest · Vitest · Playwright
+
+[Portfolio presentation](https://atifmubashar.vercel.app/work) · [Author](https://atifmubashar.vercel.app/) · [Contact](mailto:atifmubashar353@gmail.com)
+
+## Engineering highlights
+
+- Backend layers separate API contracts, business rules, repositories, and permission policies.
+- Short-lived JWT access tokens and rotating httpOnly refresh cookies support workspace access.
+- Unit, integration, UI, and browser test files are included; the commands below let you verify them locally.
+- Personal portfolio project. Demo data is synthetic; it is not evidence of customer usage.
+
 A Jira-style project management and team collaboration platform: workspaces, role-based access, agile projects (backlog, sprints, board, timeline, calendar, reports), full-page issues with estimates and work logs, rich-text docs, dashboards, an admin console and email notifications.
 
 - **Backend:** Python 3.11+, FastAPI, Pydantic v2, Beanie (PyMongo async) on MongoDB, JWT access tokens with a rotating httpOnly refresh cookie, Argon2 password hashing, aiosmtplib and Jinja2 for email.
@@ -227,9 +240,9 @@ docs/              SRS and project blueprint
 
 ## Testing summary
 
-- **Backend:** 289 tests covering the permission matrix, auth and token rotation, email verification and delivery, invitations, project visibility and overrides, admin user management, issue types, epics and keys, sprints and burndown, work logs, links, attachments, reports, docs, automation, search, audit log, password reset, workflow rules and bulk edit.
-- **Frontend:** 286 component, guard, store and feature tests with MSW.
-- **End to end:** 13 Playwright tests for sign-up with verification, project and board flow, invitations, viewer read-only access, per-project overrides, deactivation, the Jira workflow (epic, child issues, estimates, work log, sprint, reports), admin user creation, theme and mobile navigation, and axe accessibility scans in light and dark.
+- **Backend:** Tests covering the permission matrix, auth and token rotation, email verification and delivery, invitations, project visibility and overrides, admin user management, issue types, epics and keys, sprints and burndown, work logs, links, attachments, reports, docs, automation, search, audit log, password reset, workflow rules and bulk edit.
+- **Frontend:** Component, guard, store and feature tests with MSW.
+- **End to end:** Playwright tests for sign-up with verification, project and board flow, invitations, viewer read-only access, per-project overrides, deactivation, the Jira workflow (epic, child issues, estimates, work log, sprint, reports), admin user creation, theme and mobile navigation, and axe accessibility scans in light and dark.
 
 ## Known limitations
 
